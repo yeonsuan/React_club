@@ -54,3 +54,61 @@ showB(){console.log('지선은'+super.showB()+'입니다')}
 
 
 
+### Array 내장함수
+1. map
+- 길이변화가 없이 배열에 속한 항목을 변환할때 많이 쓴다.
+- 기존의 배열은 변화가 없음
+
+어떨때 사용?
+- for 반복문 대신
+animals라는 배열에 "고양이"라는 요소가 몇개있는지 찾기
+
+const animals = ["강아지", "고양이", "햄스터", "강아지", "고양이", "고양이", "토끼"];
+let count =0;
+animals.map((animal) => {if(animal === "고양이"){count += 1;}});
+console.log(count);
+
+
+2. filter
+- 원하는 항목만 골라서 새 배열로 만들어주는 함수이다.
+
+어떨때 사용?
+- for반복문과 if 대신
+
+고양이들만 새 배열에 넣어보자!
+const animals = ["복슬 강아지", "검정 고양이", "노란 햄스터", "강아지", "노랑 고양이", "고양이", "흰 토끼"];
+
+let cats = animals.filter((animal) => {retrun animal.indexOf("고양이") !== -1});
+console.log(cats);
+
+
+
+3. concat
+- 배열과 배열을 합치거나 배열에 특정값을 추가해주는 함수이다.
+- 중복제거를 쓸 수 있다.
+
+어떨때 사용?
+- 합칠때
+dogs와 cats를 합쳐서 한개의 배열로 만들어보자
+
+const dogs = ["검은 강아지", "노란 강아지", "흰 강아지"];
+const cats = ["검은 고양이", "복슬 고양이", "노란 고양이"];
+const animals = dogs.concat(cats);
+console.log(animals);
+
+
+4. from
+- 유사배열을 복사해서 새로운 배열을 만들때 쓴다고 생각하면 편하다
+- 유사배열? html이나 dom리스트같은 것들
+- 초기화할때, 즉 아무것도 없는 함수에, 새로운배열을 만들때 씀
+
+어떤 경우에 쓸 수 있을까??
+- "jiseon5" -> ['j','i','s','e','o','n',5] 이런식으로 배열화 할 때
+- Array.from('hello',(item,idx)=>{return idx} -> [0,1,2,3,4] 길이가 문자열과 같고, 숫자요소는 같은 배열 만들때
+- Array.from(length:5,(item,idx)=>{return idx} -> [0,1,2,3,4] 어떤값도 넣어주지 않았지만, 이렇게도 가능
+
+5. map
+- 반복문
+
+
+
