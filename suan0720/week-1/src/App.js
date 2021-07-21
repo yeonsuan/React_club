@@ -1,27 +1,31 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// BucketList 컴포넌트를 import 해옵니다.
+// import [컴포넌트 명] from [컴포넌트가 있는 파일경로];
+import BucketList from './BucketList';
 
-function App() {
-  const styles ={
-    border : '1px solid #eee',
-    padding : '20px',
-    display : 'flex',
-    width : '100vw',
-    maxWidth : '400px',
-    margin : '30px auto',
-    flexDirection : 'column',
-  };
+// 클래스형 컴포넌트는 이렇게 생겼습니다!
+class App extends React.Component {
 
-  return (
-    <div className="App">
-     <div style={styles}>
-       <h1 style={{color:'green'}}>안녕하세요!</h1>
-       <hr style={{width:'100%'}}/>
-       <p style={{textAlign:'left'}}>이름을 입력하세요</p>
-       <input type="text"/>
-     </div>
-    </div>
-  );
+  constructor(props){
+    super(props);
+    // App 컴포넌트의 state를 정의해줍니다.
+    this.state = {
+      list: ['영화관 가기', '매일 책읽기', '수영 배우기'],
+    };
+  }
+
+  // 랜더 함수 안에 리액트 엘리먼트를 넣어줍니다!
+  render() {
+      return (
+      <div className="App">
+        <h1>내 버킷리스트</h1>
+        {/* 컴포넌트를 넣어줍니다. */}
+        <BucketList/>
+      </div>
+    );
+  }
 }
 
 export default App;
