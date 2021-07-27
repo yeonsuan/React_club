@@ -1,10 +1,10 @@
 import React from "react";
-import img from "./hand_one_finger.png";
+import img from "./scc_img01.png";
 
 const Start = (props) => {
 
     return (
-        <div class="container">
+        <div className="container">
             <div className="header">
             <img className="header__img" src={img}/>
             <h1>나는 <span>{props.name}</span>에 대해 얼마나 알고 있을까?</h1>
