@@ -2,4 +2,5 @@
 매일 공부하고 함께 공유합니다! (감시용😒)
 
 
-<img width="929" alt="KakaoTalk_20210730_152456527" src="https://user-images.githubusercontent.com/80691482/127610360-e63906a0-5739-4f4e-9dd5-960b68675bd0.png">
+![KakaoTalk_20210730_153105248](https://user-images.githubusercontent.com/80691482/127610729-b3731fc9-d195-468c-bb30-66c88703b206.jpg)
+
